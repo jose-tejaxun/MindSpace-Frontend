@@ -21,7 +21,7 @@ export default function Navbar() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to={role === 'ADMIN' ? '/admin/dashboard' : '/user/dashboard'}>
-                Dashboard
+                Chat Bot
               </Link>
             </li>
             <li className="nav-item">
