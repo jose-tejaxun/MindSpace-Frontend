@@ -1,5 +1,5 @@
 // src/utils/api.js
-import { TESTS } from "../data/tests";
+import { TESTS } from "./tests";
 
 export const fetchTest = async (type) => {
   return new Promise((resolve, reject) => {
