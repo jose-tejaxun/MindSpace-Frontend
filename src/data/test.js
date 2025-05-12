@@ -2,7 +2,8 @@ export const TESTS = {
     diagnostic: {
         type: "diagnostic",
         title: "Test de diagnóstico de salud mental",
-        description: "Responde estas preguntas para detectar posibles síntomas de ansiedad, depresión, TDAH, estrés o burnout.",
+        description:
+            "Responde estas preguntas para detectar posibles síntomas de ansiedad, depresión, TDAH, estrés o burnout.",
         questions: Array.from({ length: 50 }, (_, i) => {
             let category = "";
             let text = "";
@@ -28,15 +29,16 @@ export const TESTS = {
                 id: `q${i + 1}`,
                 text,
                 options: ["yes", "no"],
-                correct_answer: category
+                correct_answer: category,
             };
-        })
+        }),
     },
 
     mbti: {
         type: "mbti",
         title: "Test de Personalidad MBTI",
-        description: "Descubre tu tipo de personalidad respondiendo estas 50 preguntas.",
+        description:
+            "Descubre tu tipo de personalidad respondiendo estas 50 preguntas.",
         questions: (() => {
             const build = (startIndex, questions, axis) =>
                 questions.map(([label1, value1, label2, value2], i) => ({
@@ -44,10 +46,9 @@ export const TESTS = {
                     text: `Pregunta ${startIndex + i}:`,
                     options: [
                         { label: label1, value: value1 },
-                        { label: label2, value: value2 }
-                    ]
+                        { label: label2, value: value2 },
+                    ],
                 }));
-
 
             const ei = build(1, [
                 ["Prefiero estar con otras personas", "E", "Prefiero estar solo", "I"],
@@ -61,7 +62,7 @@ export const TESTS = {
                 ["Actúo espontáneamente", "E", "Analizo antes de actuar", "I"],
                 ["Socializar me activa", "E", "Socializar me cansa", "I"],
                 ["Hablo mucho en reuniones", "E", "Prefiero escuchar", "I"],
-                ["Expreso mis ideas al instante", "E", "Prefiero pensar antes de compartir", "I"]
+                ["Expreso mis ideas al instante", "E", "Prefiero pensar antes de compartir", "I"],
             ], "ei");
 
             const sn = build(13, [
@@ -76,7 +77,7 @@ export const TESTS = {
                 ["Me enfoco en el presente", "S", "Me enfoco en el futuro", "N"],
                 ["Prefiero certezas", "S", "Acepto lo ambiguo", "N"],
                 ["Hago planes paso a paso", "S", "Pienso en grandes conceptos", "N"],
-                ["Prefiero lo conocido", "S", "Me gusta lo desconocido", "N"]
+                ["Prefiero lo conocido", "S", "Me gusta lo desconocido", "N"],
             ], "sn");
 
             const tf = build(25, [
@@ -91,7 +92,7 @@ export const TESTS = {
                 ["Critico constructivamente", "T", "Evito herir", "F"],
                 ["Priorizo principios", "T", "Priorizo personas", "F"],
                 ["Evalúo por resultados", "T", "Evalúo por intención", "F"],
-                ["Prefiero precisión", "T", "Prefiero comprensión", "F"]
+                ["Prefiero precisión", "T", "Prefiero comprensión", "F"],
             ], "tf");
 
             const jp = build(37, [
@@ -106,10 +107,10 @@ export const TESTS = {
                 ["Me gusta terminar tareas", "J", "Me entusiasma comenzarlas", "P"],
                 ["Sigo reglas", "J", "Adapto las reglas", "P"],
                 ["Organizo mi día", "J", "Improviso mi día", "P"],
-                ["Evito cambios repentinos", "J", "Me adapto a los cambios", "P"]
+                ["Evito cambios repentinos", "J", "Me adapto a los cambios", "P"],
             ], "jp");
 
             return [...ei, ...sn, ...tf, ...jp];
-        })()
-    }
+        })(),
+    },
 };
