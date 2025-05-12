@@ -23,16 +23,32 @@ export default function Login() {
   };
 
   return (
-    <div className="container mt-5">
-      <h2>Iniciar sesión</h2>
+  <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div className="card p-4 shadow" style={{ width: '100%', maxWidth: '400px' }}>
+      <h2 className="text-center mb-4">Iniciar sesión</h2>
       <form onSubmit={handleSubmit}>
-        <input type="email" className="form-control mb-3" placeholder="Correo" value={email} onChange={e => setEmail(e.target.value)} required />
-        <input type="password" className="form-control mb-3" placeholder="Contraseña" value={password} onChange={e => setPassword(e.target.value)} required />
+        <input
+          type="email"
+          className="form-control mb-3"
+          placeholder="Correo"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          className="form-control mb-3"
+          placeholder="Contraseña"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          required
+        />
         <button className="btn btn-primary w-100" type="submit">Entrar</button>
       </form>
       <p className="mt-3 text-center">
         ¿No tienes cuenta? <Link to="/register">Regístrate</Link>
       </p>
     </div>
-  );
+  </div>
+);
 }
