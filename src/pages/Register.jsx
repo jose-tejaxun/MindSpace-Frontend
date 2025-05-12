@@ -28,7 +28,7 @@ export default function Register() {
                 <h2 className="text-center mb-4">Registro</h2>
                 <form onSubmit={handleSubmit}>
                     <input name="name" className="form-control mb-2" placeholder="Nombre" onChange={handleChange} required />
-                    <label className="text-center" htmlFor="birthDate">Fecha de nacimiento</label>
+                    <h2 className="text-center">Registro</h2>
                     <input name="birth_date" type="date" className="form-control mb-2" onChange={handleChange} required />
                     <select name="sex" className="form-control mb-2" onChange={handleChange}>
                         <option value="male">Masculino</option>
