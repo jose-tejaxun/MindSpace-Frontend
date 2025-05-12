@@ -4,6 +4,7 @@ import Register from './pages/Register';
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Profile from './pages/Profile';
+import VoiceChat from './pages/VoiceChat';
 
 function App() {
   const role = localStorage.getItem('role');
@@ -16,6 +17,9 @@ function App() {
         <Route path="/user/dashboard" element={<UserDashboard />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/tests/results" element={<ResultsPage />} />
+        <Route path="/test/:testType" element={<TestPage />} />
+        <Route path="/chat" element={<VoiceChat />} />
       </Routes>
     </BrowserRouter>
   );
