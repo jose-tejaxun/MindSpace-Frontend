@@ -50,7 +50,7 @@ export default function VoiceChat() {
                 const audioURL = URL.createObjectURL(blob);
                 const audio = new Audio(audioURL);
                 audio.play();
-            }F
+            }
         };
     };
 
