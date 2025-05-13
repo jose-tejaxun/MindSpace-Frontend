@@ -4,6 +4,8 @@ import Register from './pages/Register';
 import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Profile from './pages/Profile';
+import TestPage from './pages/TestPage';
+import ResultsPage from './pages/ResultsPage';
 import VoiceChat from './pages/VoiceChat';
 
 function App() {
