@@ -16,6 +16,9 @@ function App() {
         <Route path="/user/dashboard" element={<UserDashboard />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/tests/results" element={<ResultsPage />} />
+        <Route path="/test/:testType" element={<TestPage />} />
+        <Route path="/chat" element={<VoiceChat />} />
       </Routes>
     </BrowserRouter>
   );
